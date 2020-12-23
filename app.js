@@ -461,7 +461,10 @@ bot.onText(/\/week/, (msg) => {
         output: './image.png',
         html: html,
         type: 'png',
-        puppeteerArgs: ['--no-sandbox']
+        puppeteerArgs: {
+            headless: true,
+            args: ['--no-sandbox']
+        }
     })
         .then(() => {
             bot.sendPhoto(chatId, 'image.png', { caption: '🧾 *Розклад на тиждень*', parse_mode: 'Markdown' })
