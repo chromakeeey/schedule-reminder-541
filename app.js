@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const puppetteer = require('puppetteer');
+
 const { weekToHtml } = require('./src/HtmlParser');
 
 const TelegramBot = require('node-telegram-bot-api');
@@ -14,10 +14,7 @@ const groupLesson = (name, group) => {
     return `${name} (${group} п/гр.)`
 }
 
-puppetteer.launch({
-    headless: true,
-    args: ['--no-sandbox']
-})
+
 
 const names = {
     web: 'Web-технології',
