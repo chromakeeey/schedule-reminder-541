@@ -14,8 +14,6 @@ const groupLesson = (name, group) => {
     return `${name} (${group} п/гр.)`
 }
 
-
-
 const names = {
     web: 'Web-технології',
     net: '.NET',
@@ -463,6 +461,7 @@ bot.onText(/\/week/, (msg) => {
         output: './image.png',
         html: html,
         type: 'png',
+        puppeteerArgs: ['--no-sandbox']
     })
         .then(() => {
             bot.sendPhoto(chatId, 'image.png', { caption: '🧾 *Розклад на тиждень*', parse_mode: 'Markdown' })
