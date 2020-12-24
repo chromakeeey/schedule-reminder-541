@@ -35,7 +35,7 @@ const lessonsSunday = [];
 const lessonsSaturday = [
     { timeStart: [9, 0], timeEnd: [10, 20], name: [names.lan] },
     { timeStart: [10, 35], timeEnd: [11, 55], name: [names.mov] },
-    { timeStart: [12, 10], timeEnd: [13, 30], name: [names.engsoft] }
+    { timeStart: [12, 10], timeEnd: [13, 30], name: [names.web] }
 ];
 
 const lessonsMonday = [
@@ -63,9 +63,9 @@ const lessonsWednesday = [
 ];
 
 const lessonsThursday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.net, 1), groupLesson(names.web, 2)] },
-    { timeStart: [12, 0], timeEnd: [13, 20], name: [groupLesson(names.web, 1), groupLesson(names.net, 2)] },
+    { timeStart: [8, 30], timeEnd: [9, 50], name: [names.economic] },
+    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.pract, 1), groupLesson(names.web, 2)] },
+    { timeStart: [12, 0], timeEnd: [13, 20], name: [groupLesson(names.web, 1), groupLesson(names.pract, 2)] },
     { timeStart: [13, 35], timeEnd: [14, 55], name: [names.vih] },
     //{ timeStart: [15, 10], timeEnd: [16, 10], name: [names.vih] },
 ]
