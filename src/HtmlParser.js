@@ -12,7 +12,7 @@ const lessonToHtml = (lesson, index) => {
         `
         <div style="background-color: rgba(0, 0, 0, 0.2); color: white; font-weight: 900; padding-left: 5px" >${index}</div>
         <div style="border-width: 2px; border-color: black;" >
-            ${namesString}
+            <div style="font-weight: 500">${namesString}</div>
             <h4>${hourStart}:${minuteStart} - ${hourEnd}:${minuteEnd}</h4>
             <div style="height: 2px; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 5px" ></div>
         </div>
@@ -61,7 +61,10 @@ const weekToHtml = (week, dayNames, dayTypes) => {
 
     return (
         `
-         <body style="width: 1300px; height: 800px; justify-content: center; display: flex; font-familt: sans-serif">
+         <style type="text/css">
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+         </style>
+         <body style="width: 1300px; height: 800px; justify-content: center; display: flex; font-family: 'Montserrat', sans-serif;">
             <div style="display: flex" >
                 ${html}
             </div>
