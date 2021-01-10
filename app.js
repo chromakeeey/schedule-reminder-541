@@ -452,7 +452,7 @@ bot.onText(/\/day/, (msg) => {
 
 bot.onText(/\/week/, (msg) => {
     const chatId = msg.chat.id;
-    bot.sendMessage(chatId, '*Пар не буде до 24.01.2021 🥳*');
+    bot.sendMessage(chatId, 'Пар не буде до *24.01.2021* 🥳', { parse_mode: 'Markdown' });
 
     // let message = bot.sendMessage(chatId, '🕐 *Очікуйте, бот формує зображення.*', { parse_mode: 'Markdown' })
     // let html = weekToHtml(lessons, daysName, lessonsType)
