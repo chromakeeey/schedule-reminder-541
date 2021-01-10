@@ -47,18 +47,18 @@ const lessonsMonday = [
 ]
 
 const lessonsTuesday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.web, 1), groupLesson(names.engsoft, 2)] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.engsoft, 1), groupLesson(names.web, 2)] },
-    { timeStart: [12, 0], timeEnd: [13, 20], name: [names.economic] },
-    { timeStart: [13, 35], timeEnd: [14, 55], name: [names.lan] },
+    // { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.web, 1), groupLesson(names.engsoft, 2)] },
+    // { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.engsoft, 1), groupLesson(names.web, 2)] },
+    // { timeStart: [12, 0], timeEnd: [13, 20], name: [names.economic] },
+    // { timeStart: [13, 35], timeEnd: [14, 55], name: [names.lan] },
     //{ timeStart: [15, 10], timeEnd: [16, 30], name: [groupLesson(names.met, 2)] },
 ]
 
 const lessonsWednesday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [names.mobile] },
-    { timeStart: [12, 0], timeEnd: [13, 20], name: [names.web] },
-    { timeStart: [13, 35], timeEnd: [14, 55], name: [names.lan] },
+    // { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    // { timeStart: [10, 5], timeEnd: [11, 25], name: [names.mobile] },
+    // { timeStart: [12, 0], timeEnd: [13, 20], name: [names.web] },
+    // { timeStart: [13, 35], timeEnd: [14, 55], name: [names.lan] },
     //{ timeStart: [15, 10], timeEnd: [16, 30], name: [groupLesson(names.web, 2)] },
 ];
 
@@ -452,29 +452,30 @@ bot.onText(/\/day/, (msg) => {
 
 bot.onText(/\/week/, (msg) => {
     const chatId = msg.chat.id;
+    bot.sendMessage(chatId, '*Пар не буде до 24.01.2021 🥳*');
 
-    let message = bot.sendMessage(chatId, '🕐 *Очікуйте, бот формує зображення.*', { parse_mode: 'Markdown' })
-    let html = weekToHtml(lessons, daysName, lessonsType)
-    let dateStart = new Date();
+    // let message = bot.sendMessage(chatId, '🕐 *Очікуйте, бот формує зображення.*', { parse_mode: 'Markdown' })
+    // let html = weekToHtml(lessons, daysName, lessonsType)
+    // let dateStart = new Date();
 
-    nodeHtmlToImage({
-        output: './image.png',
-        html: html,
-        type: 'png',
-        puppeteerArgs: {
-            headless: true,
-            args: ['--no-sandbox']
-        }
-    })
-        .then(() => {
-            bot.sendPhoto(chatId, 'image.png', { caption: '🧾 *Розклад на тиждень*', parse_mode: 'Markdown' })
+    // nodeHtmlToImage({
+    //     output: './image.png',
+    //     html: html,
+    //     type: 'png',
+    //     puppeteerArgs: {
+    //         headless: true,
+    //         args: ['--no-sandbox']
+    //     }
+    // })
+    //     .then(() => {
+    //         bot.sendPhoto(chatId, 'image.png', { caption: '🧾 *Розклад на тиждень*', parse_mode: 'Markdown' })
 
-            let dateEnd = new Date();
-            let final = dateEnd - dateStart;
+    //         let dateEnd = new Date();
+    //         let final = dateEnd - dateStart;
 
-            console.log((final / 1000))
-            bot.deleteMessage(chatId, message._rejectionHandler0.message_id)
-        })
+    //         console.log((final / 1000))
+    //         bot.deleteMessage(chatId, message._rejectionHandler0.message_id)
+    //     })
 
 });
 
