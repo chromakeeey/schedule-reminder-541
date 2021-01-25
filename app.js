@@ -86,7 +86,7 @@ const lessons = [
     lessonsSaturday
 ]
 
-const lessonsType = [ 'Відсутньо', 'Дистанційно', 'Дистанційно', 'Дистанційно', 'Дистанційно', 'Відсутньо', 'Дистанційно' ]
+const lessonsType = [ 'Відсутньо', 'Відсутньо', 'Дистанційно', 'Очно', 'Очно', 'Очно', 'Дистанційно' ]
 const daysName = [ 'Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четверг', 'П\'ятниця', 'Суббота' ]
 const daysNameParams = [ 'Неділю', 'Понеділок', 'Вівторок', 'Середу', 'Четверг', 'П\'ятницю', 'Субботу' ]
 
@@ -454,11 +454,12 @@ bot.onText(/\/day/, (msg) => {
 });
 
 bot.onText(/\/week/, (msg) => {
-    // const chatId = msg.chat.id;
+    const chatId = msg.chat.id;
     // bot.sendMessage(chatId, '🥳\nПар не буде до *24.01.2021*', { parse_mode: 'Markdown' });
 
-    let message = bot.sendMessage(chatId, '🕐 *Очікуйте, бот формує зображення.*', { parse_mode: 'Markdown' })
-    let html = weekToHtml(lessons, daysName, lessonsType)
+
+    let message = bot.sendMessage(chatId, '🕐 *Очікуйте, бот формує зображення.*', { parse_mode: 'Markdown' });
+    let html = weekToHtml(lessons, daysName, lessonsType);
     let dateStart = new Date();
 
     nodeHtmlToImage({
@@ -479,7 +480,6 @@ bot.onText(/\/week/, (msg) => {
             console.log((final / 1000))
             bot.deleteMessage(chatId, message._rejectionHandler0.message_id)
         })
-
 });
 
 
