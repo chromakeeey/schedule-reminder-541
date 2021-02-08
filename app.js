@@ -42,41 +42,41 @@ const lessonsSaturday = [
 
 const lessonsMonday = [
     { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.mobile, 1)] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.met, 1), groupLesson(names.engsoft, 2)] },
-    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.engsoft, 1), groupLesson(names.met, 2)] },
-    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.mobile, 2)] },
     // { timeStart: [15, 10], timeEnd: [16, 30], name: [groupLesson(names.mobile, 2)] }
 ]
 
 const lessonsTuesday = [
     { timeStart: [8, 30], timeEnd: [9, 50], name: [names.psyc] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [names.psyc] },
-    { timeStart: [11, 40], timeEnd: [13, 0], name: [names.engsoft] },
+    { timeStart: [10, 5], timeEnd: [11, 25], name: [names.economic] },
+    { timeStart: [11, 40], timeEnd: [13, 0], name: [names.met] },
     { timeStart: [13, 15], timeEnd: [14, 35], name: [names.web] },
     // { timeStart: [14, 50], timeEnd: [16, 10], name: [groupLesson(names.met, 2)] },
 ]
 
 const lessonsWednesday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.web, 1), groupLesson(names.engsoft, 2)] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.engsoft, 1), groupLesson(names.web, 1)] },
-    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
-    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.mobile, 2)] },
+    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.db, 1), groupLesson(names.web, 2)] },
+    { timeStart: [10, 5], timeEnd: [11, 25], name: [groupLesson(names.web, 1), groupLesson(names.db, 2)] },
+    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.mobile, 1), groupLesson(names.db, 2)] },
+    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.db, 1), groupLesson(names.mobile, 2)] },
     // { timeStart: [14, 50], timeEnd: [16, 10], name: [groupLesson(names.met, 2)] },
 ];
 
 const lessonsThursday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [names.pract] },
-    { timeStart: [10, 5], timeEnd: [11, 25], name: [names.economic] },
+    { timeStart: [8, 30], timeEnd: [9, 50], name: [names.economic] },
+    { timeStart: [10, 5], timeEnd: [11, 25], name: [names.psyc] },
     { timeStart: [11, 40], timeEnd: [13, 0], name: [names.mov] },
-    { timeStart: [13, 15], timeEnd: [14, 35], name: [names.vih] },
+    { timeStart: [13, 15], timeEnd: [14, 35], name: [names.engsoft] },
     // { timeStart: [14, 50], timeEnd: [16, 10], name: [groupLesson(names.met, 2)] },
 ]
 
 const lessonsFriday = [
-    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.web, 1), groupLesson(names.engsoft, 2)] },
+    { timeStart: [8, 30], timeEnd: [9, 50], name: [groupLesson(names.mobile, 1)] },
     { timeStart: [10, 5], timeEnd: [11, 25], name: [names.net] },
-    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.engsoft, 1), groupLesson(names.web, 2)] },
-    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    { timeStart: [11, 40], timeEnd: [13, 0], name: [groupLesson(names.db, 1), groupLesson(names.db, 2)] },
+    { timeStart: [13, 15], timeEnd: [14, 35], name: [groupLesson(names.mobile, 2)] },
     // { timeStart: [14, 50], timeEnd: [16, 10], name: [groupLesson(names.met, 2)] },
 ]
 
@@ -86,7 +86,7 @@ const lessons = [
     lessonsSaturday
 ]
 
-const lessonsType = [ 'Відсутньо', 'Очно', 'Дистанційно', 'Очно', 'Дистанційно', 'Очно', 'Відсутньо' ]
+const lessonsType = [ 'Відсутньо', 'Очно', 'Дистанційно', 'Дистанційно', 'Дистанційно', 'Дистанційно', 'Відсутньо' ]
 const daysName = [ 'Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четверг', 'П\'ятниця', 'Суббота' ]
 const daysNameParams = [ 'Неділю', 'Понеділок', 'Вівторок', 'Середу', 'Четверг', 'П\'ятницю', 'Субботу' ]
 
